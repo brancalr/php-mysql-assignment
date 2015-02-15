@@ -24,13 +24,12 @@ if ($result->num_rows > 0) {
 			$rented = "Checked out";
 		}
 		echo "<tr><td>" . $row["name"]. "</td><td>". $row["category"]. "</td><td>". $row["length"]. "</td>";
-		echo "<form action='rented.php' method='POST'>";
-		echo "<input type='hidden' name='inOut' value='".$row['rented']."'/>";
+/*		echo "<form action='rented.php' method='POST'>";
+		echo "<input type='hidden' name='inOut' value='".$row['rented']."'/>";*/
 		echo "<td><input type='submit' name='rented' value='Check In/Out'/>". $rented. "</td>";
 		echo "<form action='deleteRow.php' method='POST'>";
 		echo "<input type='hidden' name='vidDel' value='".$row['id']."'/>";
 		echo "<td><input type='submit' name='deleteVid' value='Delete'/></td></tr></form>";
-		//echo "<td><button onclick='$rented=1'>Check-In/Out</button></td>";
 	}
 	echo "<form action='deleteTable.php' method='POST'>";
 	echo "<input type='submit' name='deleteTable' value='Delete All Videos'/></form>";
@@ -65,9 +64,9 @@ if ($result2->num_rows > 0) {
 	  <fieldset>
 	    <form action="videoAdd.php" method="POST">
 	    Add Video:<br>
-	    <input type="text" name="name" value="Name">
-	    <input type="text" name="category" value="Category">
-	    <input type="text" name="length" value="Length"><br>
+	    Name: <input type="text" name="name">
+	    Category: <input type="text" name="category">
+	    Length: <input type="text" name="length"><br>
 	    <input type="submit" value="Add Video">
 	  </fieldset>
 	</body>

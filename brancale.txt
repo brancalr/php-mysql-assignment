@@ -1,0 +1,5 @@
+Forgot to commit roughly 10 hours of work prior to this commit.
+
+Start: Sat, 15 Feb 2015 21:30:00 -0500
+End: Sun, 15 Feb 2015 02:27:42 -0500
+Tasks: Completed all functionality except for check in/out component.

@@ -7,14 +7,13 @@ $name = $_POST['name'];
 $category = $_POST['category'];
 $length = $_POST['length'];
 
-if (gettype($name) != "string" || is_null($name)) {
-	echo "Invalid input for name!<br>";
+if (strlen($name) == 0) {
+	echo "Movie name missing! Please reenter!<br>";
+	exit;
 }
-if (gettype($category) != "string" || is_null($name)) {
-	echo "Invalid input for category!<br>";
-}
-if (gettype($length) != "string" || is_null($name)) {
-	echo "Invalid input for length!<br>";
+if (!is_numeric($length)) {
+	echo "Movie length invalid! Please reenter!<br>";
+	exit;
 }
 
 if (!($stmt = $mysqli->prepare("INSERT INTO vid_inventory(name, category, length) VALUES(?, ?, ?)"))) {
