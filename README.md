@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 PHP-MySQL-Assignment
 ====================
 In this assignment you will make a simple interface to work with a database.
@@ -99,3 +100,6 @@ You just need to fill in the Start: time. Use the same date format. I would sugg
 Have one entry per work session.
 
 
+=======
+# php-mysql-assignment
+>>>>>>> 3a0e7e6ebf0c58f2b73a9768e78c59568121d500

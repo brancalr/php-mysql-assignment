@@ -6,4 +6,8 @@ Tasks: Completed all functionality except for check in/out component.
 
 Start: Sun, 15 Feb 2015 13:00:00 -0500
 End: Sun, 15 Feb 2015 16:34:39 -0500
-Tasks: all functionality complete except for checking in and
+Tasks: all functionality complete except for checking in and out
+
+Start: Sun, 15 Feb 2015 22:00:00 -0500
+End: Sun, 15 Feb 2015 23:11:46 -0500
+Tasks: attempted to inmplement check in/out, due to time constraints/sick children
