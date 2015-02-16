@@ -14,6 +14,17 @@ if ( $mysqli->connect_errno ) {
 $sql = "SELECT id, name, category, length, rented FROM vid_inventory";
 $result = mysqli_query($mysqli, $sql);
 
+/*<script type="text/javascript">
+	function rented() {
+		if ($row['rented'] == 0) {
+			$rented = "Checked out";
+		}
+		else {
+			$rented = "Available";
+		}
+	}
+</script>*/
+
 if ($result->num_rows > 0) {
 	echo "<table border=1><tr><th>Name</th><th>Category</th><th>Length(min)</th><th>In Stock</th><th>Delete Video</th></tr>";
 	while ($row = $result->fetch_assoc()) {
@@ -26,7 +37,7 @@ if ($result->num_rows > 0) {
 		echo "<tr><td>" . $row["name"]. "</td><td>". $row["category"]. "</td><td>". $row["length"]. "</td>";
 /*		echo "<form action='rented.php' method='POST'>";
 		echo "<input type='hidden' name='inOut' value='".$row['rented']."'/>";*/
-		echo "<td><input type='submit' name='rented' value='Check In/Out'/>". $rented. "</td>";
+		echo "<td><input type='submit' name='rented' onclick='rented()' value='Check In/Out'/>". $rented. "</td>";
 		echo "<form action='deleteRow.php' method='POST'>";
 		echo "<input type='hidden' name='vidDel' value='".$row['id']."'/>";
 		echo "<td><input type='submit' name='deleteVid' value='Delete'/></td></tr></form>";
